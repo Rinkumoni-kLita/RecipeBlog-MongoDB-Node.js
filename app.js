@@ -59,4 +59,4 @@ app.use('/', routes);
 // ==================
 // Start Server
 // ==================
-app.listen(port, () => console.log(`🚀 Listening on port ${port}`));
+app.listen(port,'0.0.0.0', () => console.log(`🚀 Listening on port ${port}`));
