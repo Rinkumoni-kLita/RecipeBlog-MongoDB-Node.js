@@ -1,4 +1,4 @@
-# Recipe Blog - Using Node.js and MongoDB
+# Recipe Blog - Using Node.js + MongoDB + CICD Pipeline AWS EC2
 ## Create .env file
 Create a .env file to store your MongoDB database credentials
 Example only (copy the full connection string from MongoDB):
@@ -11,7 +11,7 @@ To run this project, install it locally using npm:
 $ npm install
 $ npm start
 ```
-#### Launch the AWS EC2 Instanc
+#### Launch the AWS EC2 Instance 
 ##### Food Recipe Node.js App - Dockerized CI/CD Pipeline on AWS EC2
 ###### Project Objective
 This project demonstrates a CI/CD pipeline using **Jenkins** and **Docker** to automatically deploy a Node.js application on an **AWS EC2** instance.  
@@ -34,6 +34,21 @@ Whenever code is pushed to **GitHub**, Jenkins builds a new Docker image, stops 
 - Jenkins installed and configured  
 - GitHub repository with Node.js app  
 - Node.js and npm installed locally for testing
+
+##### Limitations
+ - MongoDB URI stored in .env file (can use Secrets Manager for production) 
+ - No rollback mechanism implemented
+ - Single EC2 instance, no auto-scaling
+ - IaC (Terraform/CloudFormation) not used in this demo
+
+ ### Future Improvement
+ - Add rollback / Blue-Green deployment
+ - Auto-scaling via ECS / Fargate
+ - Secure credentials via AWS Secrets Manager
+ - Implement automated tests in pipeline
+
+ 
+
 #### Setup & Deployment Steps #
 1. **Clone the repository:**
 ```bash
