@@ -35,7 +35,7 @@ Whenever code is pushed to **GitHub**, Jenkins builds a new Docker image, stops 
 - GitHub repository with Node.js app  
 - Node.js and npm installed locally for testing
 
-##### Limitations
+### Limitations
  - MongoDB URI stored in .env file (can use Secrets Manager for production) 
  - No rollback mechanism implemented
  - Single EC2 instance, no auto-scaling
@@ -49,18 +49,18 @@ Whenever code is pushed to **GitHub**, Jenkins builds a new Docker image, stops 
 
  
 
-#### Setup & Deployment Steps #
+### Setup & Deployment Steps #
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/Rinkumoni-kLita/RecipeBlog-MongoDB-Node.js.git
 
-2. ** Build docker image manually:**
+2. **Build docker image manually:**
 
 cd /var/lib/jenkins/workspace/FoodRecipeNodeJs
 sudo docker build -t food-recipe-app .
 sudo docker run -d -p 3000:3000 --name food-recipe-app food-recipe-app
 
-4. ** Setups Jenkins Jobs : **
+4. **Setups Jenkins Jobs : **
 
 cd /var/lib/jenkins/workspace/FoodRecipeNodeJs
 docker stop food-recipe-app || true
@@ -73,7 +73,7 @@ docker run -d -p 3000:3000 --name food-recipe-app food-recipe-app
 
 Push code to GitHub → Jenkins triggers build automatically → New app version deployed.
 
-#### Website
+## Website
 
 <PUBLIC_IP_ADDRESS>:3000
 COOKING BLOG-HOME
