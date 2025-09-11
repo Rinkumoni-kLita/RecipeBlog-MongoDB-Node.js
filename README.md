@@ -51,17 +51,17 @@ Whenever code is pushed to **GitHub**, Jenkins builds a new Docker image, stops 
 
 ### Setup & Deployment Steps #
 1. **Clone the repository:**
-```bash
+
 git clone https://github.com/Rinkumoni-kLita/RecipeBlog-MongoDB-Node.js.git
 
 2. **Build docker image manually:**
-```bash
+
 cd /var/lib/jenkins/workspace/FoodRecipeNodeJs
 sudo docker build -t food-recipe-app .
 sudo docker run -d -p 3000:3000 --name food-recipe-app food-recipe-app
 
 4. **Setups Jenkins Jobs : **
-```bash
+
 cd /var/lib/jenkins/workspace/FoodRecipeNodeJs
 docker stop food-recipe-app || true
 docker rm food-recipe-app || true
@@ -70,9 +70,9 @@ docker run -d -p 3000:3000 --name food-recipe-app food-recipe-app
 
 
 5. **Automatic Deployment:**
-```bash
+
 Push code to GitHub → Jenkins triggers build automatically → New app version deployed.
-```bash
+
 
 ## Website
 
