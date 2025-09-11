@@ -77,7 +77,5 @@ Push code to GitHub → Jenkins triggers build automatically → New app version
 ## Website
 
 <PUBLIC_IP_ADDRESS>:3000
-COOKING BLOG-HOME
-okay
 
 
